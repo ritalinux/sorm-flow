@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    "sorm-flow",
+    "sorm-flow-core",
+    "sorm-flow-macros",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Ritalinux <wedrano1999@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/ritalinux/sorm-flow#"

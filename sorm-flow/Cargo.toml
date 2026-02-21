@@ -1,0 +1,9 @@
+[package]
+name = "sorm-flow"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+sorm-flow-core = { path = "../sorm-flow-core" }
+sorm-flow-macros = { path = "../sorm-flow-macros" }
+surrealdb = "2.0" # Re-exportar para o usuário não precisar instalar separado
