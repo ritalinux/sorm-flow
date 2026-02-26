@@ -10,5 +10,5 @@ pub mod core {
 pub mod prelude {
     pub use crate::Model;
     pub use crate::core::SormEntity;
-    pub use crate::core::surrealdb::sql::RecordId;
+    pub use crate::core::surrealdb::RecordId;
 }

@@ -24,3 +24,20 @@ pub fn sorm_model_derive(input: TokenStream) -> TokenStream {
 
     TokenStream::from(expanded)
 }
+
+#[proc_macro_derive(Relation)]
+pub fn sorm_relation_derive(input: TokenStream) -> TokenStream {
+    let input = parse_macro_input!(input as DeriveInput);
+    let name = &input.ident;
+    let table_name = name.to_string().to_lowercase();
+
+    let expanded = quote! {
+        impl sorm_flow::core::SormRelation for #name {
+            fn table_name() -> &'static str {
+                #table_name
+            }
+        }
+    };
+
+    TokenStream::from(expanded)
+}
